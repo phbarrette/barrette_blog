@@ -17,12 +17,11 @@
 
 <p><%= @article.body %></p>
 
-  <a class="btn btn-primary" <%= link_to "Edit", edit_article_path(@article) %></a>
+  <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary" %>
   <div>
-  <a class="btn btn-danger" <%= link_to "Destroy", article_path(@article), data: {
+  <%= link_to "Destroy", article_path(@article), class: "btn btn-danger", data: {
                     turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></a>
+                    turbo_confirm: "Are you sure?"} %>
                   </div>
 
 <h2>Comments</h2>
